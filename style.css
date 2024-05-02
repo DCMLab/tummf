@@ -1,0 +1,316 @@
+.title{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #261e30;
+}
+
+
+.nav-item{
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Helvetica', sans-serif;
+    transition: 0.2s;
+    position: relative;
+}
+.nav-item::after{
+    content: '';
+    position: absolute;
+    width: calc(100% - 16px);
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 8px;
+    background-color: #261e30;
+    transform-origin: bottom right;
+    transition: transform 0.3s ;
+}
+
+.nav-item:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.nav-item:hover .nav-link {
+    color: #261e30;
+}
+.nav-item .nav-link{
+    color: #261e30;
+}
+
+#footer{
+    background-color: #212529;
+}
+#logo{
+    width: 50%;
+}
+#footer p{
+    color: #ffe8bb;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.col{
+    padding: 60px;
+    margin: 0;
+
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
+    height: auto;
+    background-image: url('treeGraphicLeft.svg');
+    background-size: cover;
+    background-position: left;
+  }
+
+.overlay {
+    min-height: calc(100vh - 56px);
+    background-color: #ffe8bb92; 
+    align-items: left;
+}
+
+.content {
+    max-width: 400px !important; 
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.content h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 400;
+}
+.text-column {
+    border: 1px solid #473143; 
+    background-color:  #ffe8bbf0;
+    padding: 20px; /* Add some padding so the text isn't right against the border */
+    border-radius: 10px; 
+    width: 100%; 
+    max-width: 40vw; 
+    z-index:2;
+    position: absolute;
+    align-self: center;
+    left: 10vw;
+}
+.image-column {
+    right: 10vw;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    align-self:center;
+}
+
+.image-column img {
+    display: block;
+    height:calc(90vh - 56px);
+    width: 60vw;
+    border-radius: 10px; 
+    border: 1px solid #473143;
+    object-fit: cover;
+    margin: auto;
+}
+.text-column-index {
+    border: 1px solid #473143; /* Change #000 to the color you want for the border */
+    background-color:  #ffe8bbcc; /* Change #fff to the color you want for the background */
+    padding: 20px; /* Add some padding so the text isn't right against the border */
+    border-radius: 10px; /* Add this line */
+    width: 100%; /* Add this line */
+    max-width: 500px; /* And this line */
+    z-index:1;
+}
+
+.indent-text {
+    text-indent: 30px;
+}
+@media (max-width: 550px){
+    .text-column {
+        max-width: 80vw; 
+        justify-self: center;
+        left: auto;
+        top: 20px;
+        position: relative;
+    }
+    .image-column {
+        padding: 20px;
+        position: relative;
+        display: flex; /* Make this a flex container */
+        justify-content: center; /* Center children horizontally */
+        align-items: center; 
+        right: auto;
+    }
+    .image-column img {
+        height: 40vh;
+        width: 80vw;
+
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) { /* This applies the styles to medium-sized screens and larger */
+    .column {
+        margin: 1rem; /* Adjust as needed */
+    }
+}
+@media screen and (max-width: 768px) {
+    .title{
+        font-size: 17px !important;
+    }
+  }
+
+@media (max-width: 991px) { /* This applies the styles to small screens */
+    .column {
+        margin-bottom: 1rem; /* Adjust as needed */
+    }
+}
+.content p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 330;
+    justify-self: auto;
+}
+.dropdown-item-centered {
+    text-align: center;
+  }
+@media screen and (min-width: 990px) {
+    nav.navbar.navbar-expand-lg div.container-fluid{
+        display: flex;
+        justify-self: center;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .image-section {
+        background-position: center; 
+    }
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .overlay {
+        background-color: #ffe8bbb2;    
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.1s ease-in forwards;
+  }
+
+  .image-section2 {
+    position: relative;
+    height: auto;
+    background-image: url('./images/music-sheet.jpg');
+    background-size: cover;
+    background-position: left;
+}
+
+.tinted-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tinted-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #47314381; /* Change the color and opacity as needed */
+    z-index: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffe8bb ;
+}
+
+#footer {
+    margin-top: auto;
+}
+.img-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 5px;
+}
+.image-section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: calc(100vh - 56px);
+    background-image: url('./images/music-sheet.jpg');
+    background-size: cover;
+    background-position: left;
+}
+
+.researcher_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.researcher_photo {
+    margin-left: 10px;
+}
+
+.researcher_photo img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    object-fit: cover;
+}
+.researchers-section{
+    padding: 20px;
+}
+
+.no-grad{
+    background-image: url('./treeGraphic_nogradient.svg');
+    background-size: cover;
+    background-position: left;
+}
+
+.publications-section{
+    padding: 20px;
+}
+
+.researchers .list-group-item {
+    background-color: #ffe8bbbe; 
+    border-color: #473143; 
+}
+
+.no-scroll{    
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
+    height: auto;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+.publications .list-group-item {
+    background-color: #ffe8bbbe; 
+    border-color: #473143; 
+}
+.researchers-section h1{
+    color : #ffe8bb;
+}
+.publications .list-group-item:hover {
+    background-color: #ffe8bb; 
+}
+.publications-section h1{
+    color : #ffe8bb;
+}
